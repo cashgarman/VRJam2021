@@ -21,7 +21,7 @@ public class PlayerInterface : MonoBehaviour
     {
         if (occupied)
         {
-            
+            transform.position = player.transform.position;
         }
         else
         {
@@ -31,6 +31,7 @@ public class PlayerInterface : MonoBehaviour
 
     public void TakeASeat()
     {
+        Debug.Log("TakeASeat called");
         occupied = true;
         controls.SetActive(true);
         player.transform.position = helo.transform.position;
