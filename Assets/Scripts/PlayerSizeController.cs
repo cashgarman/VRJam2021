@@ -1,15 +1,24 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerSizeController : MonoBehaviour
 {
-    private bool _leftHeld;
-    private bool _rightHeld;
     [SerializeField] private Transform _leftController;
     [SerializeField] private Transform _rightController;
+    [SerializeField] private float _maxControllerSpread = 1.3f;
+    
+    private bool _leftHeld;
+    private bool _rightHeld;
     private bool _resizing;
     private float _startingDistance;
-    private float _maxDistance;
+    private Vector3 _resizeStartScale;
+    private Vector3 _initialScale;
+
+    private void Awake()
+    {
+        _initialScale = transform.localScale;
+    }
 
     public void OnLeftResizeActivated(InputAction.CallbackContext context)
     {
@@ -32,7 +41,8 @@ public class PlayerSizeController : MonoBehaviour
         if (!_resizing && _leftHeld && _rightHeld)
         {
             _resizing = true;
-            _startingDistance = Vector3.Distance(_leftController.position, _rightController.position);
+            _startingDistance = Vector3.Distance(_leftController.localPosition, _rightController.localPosition) / _maxControllerSpread;
+            _resizeStartScale = transform.localScale;
             Debug.Log($"Started resizing with controller distance: {_startingDistance}");
         }
         else if (_resizing && (!_leftHeld || !_rightHeld))
@@ -43,13 +53,12 @@ public class PlayerSizeController : MonoBehaviour
 
         if (_resizing)
         {
-            var distance = Vector3.Distance(_leftController.position, _rightController.position);
-            _maxDistance = Mathf.Max(_maxDistance, distance);
+            // Get the current local space distance between the controllers
+            var distance = Vector3.Distance(_leftController.localPosition, _rightController.localPosition) / _maxControllerSpread;
             
-            Debug.Log($"Max distance: {_maxDistance} ({distance})");
-
-            var percentStretched = distance / _maxDistance;
-            Debug.Log($"percentStretched: {percentStretched}");
+            var percentStretched = (distance - _startingDistance) / _maxControllerSpread + 1f;
+            
+            transform.localScale = _resizeStartScale * percentStretched;
         }
     }
 }
