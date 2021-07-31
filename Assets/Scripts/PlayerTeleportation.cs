@@ -13,7 +13,6 @@ public class PlayerTeleportation : MonoBehaviour
 		// Show and hide the teleport 'hands' based on the controller inputs
 		var left = InputHelpers.IsPressed(_leftController.inputDevice, teleportRayShowButton, out _, .1f);
 		
-		Debug.Log($"left: {left}");
 		_leftController.gameObject.SetActive(left);
 		_rightController.gameObject.SetActive(_rightController.inputDevice.IsPressed(teleportRayShowButton, out _, .1f));
 	}
