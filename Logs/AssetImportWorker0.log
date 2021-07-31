@@ -1229,3 +1229,28 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 3777.498181 seconds.
+  path: Assets/Scenes/TinyWorld1.unity
+  artifactKey: Guid(d1105ef7bd6fd5b49a5603b767a5f43c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/TinyWorld1.unity using Guid(d1105ef7bd6fd5b49a5603b767a5f43c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8b6efd5cc47433d55a7a4a3bc74cfaee') in 0.031709 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 22.999057 seconds.
+  path: Assets/Scenes/TinyWorld1 1.unity
+  artifactKey: Guid(b9f151184fa72554f8eb650e111c2db1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/TinyWorld1 1.unity using Guid(b9f151184fa72554f8eb650e111c2db1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ffc6d5c201efd0b559d77520c434b0ff') in 0.007814 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 359.905231 seconds.
+  path: Assets/Scripts/FauxGravityBody.cs
+  artifactKey: Guid(4b50b693dbe0a054193b4e527f318dbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/FauxGravityBody.cs using Guid(4b50b693dbe0a054193b4e527f318dbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7635e12cba18d15153f508c443d5780b') in 0.026667 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 142.493682 seconds.
+  path: Assets/Scripts/FauxGravityAttractor.cs
+  artifactKey: Guid(2b5c57c2ea1370a4592ce11c170f20f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/FauxGravityAttractor.cs using Guid(2b5c57c2ea1370a4592ce11c170f20f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc44112911bff6392908f578bbf065c1') in 0.006565 seconds 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
