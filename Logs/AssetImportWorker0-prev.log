@@ -1,77 +1,260 @@
 Using pre-set license
-Built from '2021.1/release' branch; Version is '2021.1.10f1 (b15f561b2cef) revision 11624278'; Using compiler version '192528614'; Build Type 'Release'
-OS: 'Windows 10 Pro; OS build 19042.1110; Version 2009; 64bit' Language: 'en' Physical Memory: 32612 MB
+Built from '2021.1/staging' branch; Version is '2021.1.15f1 (e767a7370072) revision 15165351'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Home; OS build 19043.1110; Version 2009; 64bit' Language: 'en' Physical Memory: 16221 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
  COMMAND LINE ARGUMENTS:
-E:\Unity\2021.1.10f1\Editor\Unity.exe
+D:\Unity\2021.1.15f1\Editor\Unity.exe
 -adb2
 -batchMode
 -noUpm
 -name
 AssetImportWorker0
 -projectPath
-E:/MoreProjects/VRJam2021
+D:/Documents/VR Programs/VRJam2021-Lee
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-57552
-Successfully changed project path to: E:/MoreProjects/VRJam2021
-E:/MoreProjects/VRJam2021
+54058
+Successfully changed project path to: D:/Documents/VR Programs/VRJam2021-Lee
+D:/Documents/VR Programs/VRJam2021-Lee
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 958.81 ms, found 6 plugins.
-Preloading 1 native plugins for Editor in 3.86 ms.
-Initialize engine version: 2021.1.10f1 (b15f561b2cef)
-[Subsystems] Discovering subsystems at path E:/Unity/2021.1.10f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path E:/MoreProjects/VRJam2021/Assets
+Refreshing native plugins compatible for Editor in 131.32 ms, found 6 plugins.
+Preloading 1 native plugins for Editor in 0.87 ms.
+Initialize engine version: 2021.1.15f1 (e767a7370072)
+[Subsystems] Discovering subsystems at path D:/Unity/2021.1.15f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/Documents/VR Programs/VRJam2021-Lee/Assets
 GfxDevice: creating device client; threaded=0; jobified=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: NVIDIA GeForce RTX 2070 with Max-Q Design (ID=0x1f10)
+    Renderer: NVIDIA GeForce GTX 1650 (ID=0x1f91)
     Vendor:   NVIDIA
-    VRAM:     8031 MB
-    Driver:   27.21.14.6647
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+    VRAM:     3962 MB
+    Driver:   27.21.14.5167
 Initialize mono
-Mono path[0] = 'E:/Unity/2021.1.10f1/Editor/Data/Managed'
-Mono path[1] = 'E:/Unity/2021.1.10f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
-Mono config path = 'E:/Unity/2021.1.10f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56712
+Mono path[0] = 'D:/Unity/2021.1.15f1/Editor/Data/Managed'
+Mono path[1] = 'D:/Unity/2021.1.15f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'D:/Unity/2021.1.15f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56384
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: E:/Unity/2021.1.10f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.006016 seconds.
+Register platform support module: D:/Unity/2021.1.15f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: D:/Unity/2021.1.15f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Register platform support module: D:/Unity/2021.1.15f1/Editor/Data/PlaybackEngines/LuminSupport/UnityEditor.Lumin.Extensions.dll
+Registered in 0.001854 seconds.
+Native extension for Lumin target not found
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1431.90 ms, found 6 plugins.
-Preloading 1 native plugins for Editor in 0.43 ms.
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 124.07 ms, found 6 plugins.
+Preloading 1 native plugins for Editor in 0.08 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in 15.395 seconds
+- Completed reload, in  1.682 seconds
 Domain Reload Profiling:
-	ReloadAssembly (15396ms)
-		BeginReloadAssembly (454ms)
+	ReloadAssembly (1682ms)
+		BeginReloadAssembly (67ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (4ms)
-		EndReloadAssembly (6194ms)
-			LoadAssemblies (455ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (523ms)
+			LoadAssemblies (67ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (2177ms)
+			SetupTypeCache (178ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (458ms)
-			SetupLoadedEditorAssemblies (2919ms)
+			RebuildScriptCaches (31ms)
+			SetupLoadedEditorAssemblies (264ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (57ms)
-				SetLoadedEditorAssemblies (3ms)
-				RefreshPlugins (1433ms)
-				BeforeProcessingInitializeOnLoad (23ms)
-				ProcessInitializeOnLoadAttributes (1134ms)
-				ProcessInitializeOnLoadMethodAttributes (267ms)
+				InitializePlatformSupportModulesInManaged (7ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (124ms)
+				BeforeProcessingInitializeOnLoad (1ms)
+				ProcessInitializeOnLoadAttributes (101ms)
+				ProcessInitializeOnLoadMethodAttributes (30ms)
 				AfterProcessingInitializeOnLoad (0ms)
-				EditorAssembliesLoaded (2ms)
+				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.087392 seconds.
+Registered in 0.008028 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Documents\VR Programs\VRJam2021-Lee\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\Documents\VR Programs\VRJam2021-Lee\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for Lumin target not found
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 130.52 ms, found 6 plugins.
+Preloading 1 native plugins for Editor in 0.07 ms.
+[XR] OculusXRPlugin: registering subsystems
+[XR] Unable to register display lifecyle provider: [1]
+[XR] Oculus Input lifecycle provider registered.
+[XR] Unable to register input lifecyle provider: [1]
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object
+  at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x00048] in D:\Documents\VR Programs\VRJam2021-Lee\Library\PackageCache\com.unity.xr.oculus@1.9.1\Runtime\OculusLoader.cs:249 
+  at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x0007b] in D:\Documents\VR Programs\VRJam2021-Lee\Library\PackageCache\com.unity.xr.oculus@1.9.1\Runtime\OculusLoader.cs:234 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod.InternalInvoke(System.Reflection.MonoMethod,object,object[],System.Exception&)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00032] in <695d1cc93cca45069c528c15c9fdd749>:0 
+   --- End of inner exception stack trace ---
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00048] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at UnityEditor.EditorAssemblies.ProcessInitializeOnLoadMethodAttributes () [0x00047] in <5be0ebaa82df43c7b5c1b1db9bde1e97>:0 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.805 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1805ms)
+		BeginReloadAssembly (178ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (20ms)
+		EndReloadAssembly (1568ms)
+			LoadAssemblies (124ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (434ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (68ms)
+			SetupLoadedEditorAssemblies (848ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (5ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (131ms)
+				BeforeProcessingInitializeOnLoad (109ms)
+				ProcessInitializeOnLoadAttributes (585ms)
+				ProcessInitializeOnLoadMethodAttributes (15ms)
+				AfterProcessingInitializeOnLoad (3ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 0.98 ms, found 6 plugins.
+Preloading 1 native plugins for Editor in 0.05 ms.
+Unloading 5323 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 290.7 MB.
+System memory in use after: 291.1 MB.
+
+Unloading 160 unused Assets to reduce memory usage. Loaded Objects now: 5758.
+Total: 6.134000 ms (FindLiveObjects: 0.417800 ms CreateObjectMapping: 0.349700 ms MarkObjects: 5.094100 ms  DeleteObjects: 0.270500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  path: Assets/Scenes/Lee.unity
+  artifactKey: Guid(dfa77f68e86e03a4681906418ca998b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Lee.unity using Guid(dfa77f68e86e03a4681906418ca998b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7deb528e5a6111bafa4843c00e07bd23') in 0.013803 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 50.730129 seconds.
+  path: Assets/Scenes/TheWorld.unity
+  artifactKey: Guid(2fe2c032dae85894887b0c3d508d0cf0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/TheWorld.unity using Guid(2fe2c032dae85894887b0c3d508d0cf0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '07cfc3869aea310b63dade6747da7b9b') in 0.007242 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 107.458336 seconds.
+  path: Assets/Lee Workspace/helo.blend
+  artifactKey: Guid(882c26f4367c02c469b338ab56494218) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Lee Workspace/helo.blend using Guid(882c26f4367c02c469b338ab56494218) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e3ceeed4381e49e50937c05398005a8') in 0.129711 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 112.700962 seconds.
+  path: Assets/Materials
+  artifactKey: Guid(497d50c3785e04447b736b8c48f1c7fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials using Guid(497d50c3785e04447b736b8c48f1c7fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '41a0c7ebd59019121fa63e31bdaadf29') in 0.010243 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 154.549258 seconds.
+  path: Assets/ToysPack/Textures/Toys_TextureAtlas.png
+  artifactKey: Guid(aba46be8874f750459dba3e50279fae7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ToysPack/Textures/Toys_TextureAtlas.png using Guid(aba46be8874f750459dba3e50279fae7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4acd6d9287beb54e6b4a5623720a78aa') in 0.078406 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 48.199538 seconds.
+  path: Assets/helo.blend
+  artifactKey: Guid(73087c417347cb94399b0cc4e1ba43ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/helo.blend using Guid(73087c417347cb94399b0cc4e1ba43ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8fb8619518616cc4e28a6e9bb392e2ae') in 0.047579 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 19.346790 seconds.
+  path: Assets/helo.blend1
+  artifactKey: Guid(63817795a573cd14fad005bd542e3869) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/helo.blend1 using Guid(63817795a573cd14fad005bd542e3869) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9cef71425e71db16ae0d4e80146a92ea') in 0.006204 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 16.085277 seconds.
+  path: Assets/Prefabs
+  artifactKey: Guid(d97a2eceabb01f74c92b4ad2e28c5812) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs using Guid(d97a2eceabb01f74c92b4ad2e28c5812) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '165e9ffeb4385d68044db5aeec00717d') in 0.006019 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 27.330631 seconds.
+  path: Assets/Prefabs/helo.blend
+  artifactKey: Guid(73087c417347cb94399b0cc4e1ba43ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/helo.blend using Guid(73087c417347cb94399b0cc4e1ba43ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5091e32e6ba3fdc7515f1efc4992f602') in 0.031897 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 211.824738 seconds.
+  path: Assets/70s Car Seat, by Tokyo Liu/Prefabs/StyleA.prefab
+  artifactKey: Guid(2978d950660b3ec4d9392f051fb07302) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/70s Car Seat, by Tokyo Liu/Prefabs/StyleA.prefab using Guid(2978d950660b3ec4d9392f051fb07302) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d7c1dee188ae0bd4810bb4f4d520723') in 0.223171 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 13.437167 seconds.
+  path: Assets/70s Car Seat, by Tokyo Liu/FBX/LOD3.FBX
+  artifactKey: Guid(86316064fad705348a30c5208cdbad33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/70s Car Seat, by Tokyo Liu/FBX/LOD3.FBX using Guid(86316064fad705348a30c5208cdbad33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e87db77db10457fe61e1a4d15712c36e') in 0.030025 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 74.292322 seconds.
+  path: Assets/70s Car Seat, by Tokyo Liu/FBX/LOD2.FBX
+  artifactKey: Guid(4ff6f46d19ef0184c9972453de75e812) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/70s Car Seat, by Tokyo Liu/FBX/LOD2.FBX using Guid(4ff6f46d19ef0184c9972453de75e812) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '180c1c47a555555c9d6543aa9545ed64') in 0.017250 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.135193 seconds.
+  path: Assets/70s Car Seat, by Tokyo Liu/FBX/LOD1.FBX
+  artifactKey: Guid(b405575d5d2455048b63a07034015c3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/70s Car Seat, by Tokyo Liu/FBX/LOD1.FBX using Guid(b405575d5d2455048b63a07034015c3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b42534fe3770b5170280b64ec84935c6') in 0.015309 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.637537 seconds.
+  path: Assets/70s Car Seat, by Tokyo Liu/FBX/Materials
+  artifactKey: Guid(d0ceed3677dfff846a7f8d23e8c98917) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/70s Car Seat, by Tokyo Liu/FBX/Materials using Guid(d0ceed3677dfff846a7f8d23e8c98917) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '169c085c27a0ff40fa76307a8e6b68b9') in 0.002668 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 27.008888 seconds.
+  path: Assets/70s Car Seat, by Tokyo Liu/demoScene.unity
+  artifactKey: Guid(8da71c6e68e3d5b4fa735ced81ed13ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/70s Car Seat, by Tokyo Liu/demoScene.unity using Guid(8da71c6e68e3d5b4fa735ced81ed13ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '703f2afa91c2f25605763fd3f7b2295e') in 0.006487 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 19.226800 seconds.
+  path: Assets/70s Car Seat, by Tokyo Liu/FBX/HeloSeat.FBX
+  artifactKey: Guid(86316064fad705348a30c5208cdbad33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/70s Car Seat, by Tokyo Liu/FBX/HeloSeat.FBX using Guid(86316064fad705348a30c5208cdbad33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7b3dce058685871ae08649999751d5c7') in 0.016636 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5206.942566 seconds.
+  path: Assets/UI_Icons/Prefabs/Play.prefab
+  artifactKey: Guid(bd54d7a423fe57c4ca88057d8f9a622f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI_Icons/Prefabs/Play.prefab using Guid(bd54d7a423fe57c4ca88057d8f9a622f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '94afbcf5e5537c6c2fdd86c83610e488') in 0.023413 seconds 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file

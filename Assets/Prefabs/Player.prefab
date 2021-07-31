@@ -414,6 +414,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 467012133957935776}
     m_Modifications:
+    - target: {fileID: 1498535004650126512, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
+      propertyPath: m_Parameters.widthMultiplier
+      value: 0.02
+      objectReference: {fileID: 0}
     - target: {fileID: 1498535004650126519, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
       propertyPath: m_InteractionManager
       value: 
@@ -470,6 +474,14 @@ PrefabInstance:
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 3446258454398551040}
+    - target: {fileID: 1498535005821314399, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
+      propertyPath: m_UseWorldSpace
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1498535005821314399, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
+      propertyPath: m_Parameters.widthMultiplier
+      value: 0.02
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
 --- !u!1 &467012133659770226 stripped
