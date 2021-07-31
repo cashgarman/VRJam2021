@@ -15,8 +15,7 @@ GameObject:
   - component: {fileID: 467012133957935780}
   - component: {fileID: 4626207873206879299}
   - component: {fileID: 803914189637188741}
-  - component: {fileID: 814561541}
-  - component: {fileID: 814561543}
+  - component: {fileID: 5945626914153322758}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -130,7 +129,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_System: {fileID: 0}
---- !u!114 &814561541
+--- !u!114 &5945626914153322758
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -139,76 +138,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 467012133957935781}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2213c36610e3b1c4bbf886810ed9db12, type: 3}
+  m_Script: {fileID: 11500000, guid: 151b3a5017690924a93c22072ed28cad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_System: {fileID: 4626207873206879299}
-  m_TurnAmount: 45
-  m_DebounceTime: 0.5
-  m_EnableTurnLeftRight: 1
-  m_EnableTurnAround: 1
-  m_LeftHandSnapTurnAction:
-    m_UseReference: 1
-    m_Action:
-      m_Name: Left Hand Snap Turn
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: 29e4317f-ef80-4f9b-95d8-8085ba9d45c9
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-    m_Reference: {fileID: 1010738217276881514, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  m_RightHandSnapTurnAction:
-    m_UseReference: 1
-    m_Action:
-      m_Name: Right Hand Snap Turn
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: 51907e1a-c13b-4e03-baae-e596b935b9ec
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-    m_Reference: {fileID: -6493913391331992944, guid: c348712bda248c246b8c49b3db54643f, type: 3}
---- !u!114 &814561543
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 467012133957935781}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0bf296fc962d7184ab14ad1841598d5f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_System: {fileID: 0}
-  m_MoveSpeed: 5
-  m_EnableStrafe: 1
-  m_UseGravity: 0
-  m_GravityApplicationMode: 0
-  m_ForwardSource: {fileID: 0}
-  m_LeftHandMoveAction:
-    m_UseReference: 1
-    m_Action:
-      m_Name: Left Hand Move
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: c98eb6c5-22cf-41d4-aee3-ac7a84214be9
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-    m_Reference: {fileID: 6972639530819350904, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  m_RightHandMoveAction:
-    m_UseReference: 1
-    m_Action:
-      m_Name: Right Hand Move
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: 18ae5385-4d3a-47b2-a29b-292d3fa7bcd5
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-    m_Reference: {fileID: -8198699208435500284, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  _leftController: {fileID: 467012134182587684}
+  _rightController: {fileID: 467012133198959823}
+  _maxControllerSpread: 1.3
 --- !u!1 &5168115263306713117
 GameObject:
   m_ObjectHideFlags: 0
@@ -219,7 +154,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3410449801958938699}
   - component: {fileID: 829250808226569594}
-  - component: {fileID: 1998621493}
+  - component: {fileID: 5656698303706592488}
   m_Layer: 0
   m_Name: Input Action Manager
   m_TagString: Untagged
@@ -255,7 +190,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ActionAssets:
   - {fileID: -944628639613478452, guid: c348712bda248c246b8c49b3db54643f, type: 3}
---- !u!114 &1998621493
+--- !u!114 &5656698303706592488
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -341,9 +276,21 @@ MonoBehaviour:
     m_ActionId: bfa204c7-3c92-4193-bad1-39eb71920042
     m_ActionName: XRI LeftHand/Translate Anchor
   - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: ab65f170-49f8-4814-912a-560b47de74b2
-    m_ActionName: XRI LeftHand/Custom
+      m_Calls:
+      - m_Target: {fileID: 5945626914153322758}
+        m_TargetAssemblyTypeName: PlayerSizeController, Assembly-CSharp
+        m_MethodName: OnLeftResizeActivated
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 8234b321-5d5b-4127-b3fb-204db7473aa2
+    m_ActionName: XRI LeftHand/ResizeActivate
   - m_PersistentCalls:
       m_Calls: []
     m_ActionId: c4990d70-7b8a-4ce1-b03c-da86716b8352
@@ -396,6 +343,22 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 6f7cf253-7062-443b-b10f-2be48a33f027
     m_ActionName: XRI RightHand/Translate Anchor
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5945626914153322758}
+        m_TargetAssemblyTypeName: PlayerSizeController, Assembly-CSharp
+        m_MethodName: OnRightResizeActivated
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 9ab441fd-158c-4b30-ba51-834f2ace0fea
+    m_ActionName: XRI RightHand/ResizeActivate
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: XRI HMD
@@ -451,146 +414,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 467012133957935776}
     m_Modifications:
-    - target: {fileID: 1346845299948209327, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
-      propertyPath: m_ModelPrefab
-      value: 
-      objectReference: {fileID: 7924803527378313844, guid: 1a61de921297f844e8607fb59390dccb, type: 3}
-    - target: {fileID: 1346845299948209327, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
-      propertyPath: m_SelectAction.m_UseReference
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1346845299948209327, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
-      propertyPath: m_ActivateAction.m_UseReference
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1346845299948209327, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
-      propertyPath: m_SelectAction.m_Action.m_SingletonActionBindings.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1346845299948209327, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
-      propertyPath: m_ActivateAction.m_Action.m_SingletonActionBindings.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1346845299948209327, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
-      propertyPath: m_SelectAction.m_Action.m_SingletonActionBindings.Array.data[0].m_Id
-      value: db025d61-c863-4c56-bae9-4a059430173d
-      objectReference: {fileID: 0}
-    - target: {fileID: 1346845299948209327, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
-      propertyPath: m_ActivateAction.m_Action.m_SingletonActionBindings.Array.data[0].m_Id
-      value: 5e91f24e-1fe9-49f5-af35-1ff785b55f53
-      objectReference: {fileID: 0}
-    - target: {fileID: 1346845299948209327, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
-      propertyPath: m_SelectAction.m_Action.m_SingletonActionBindings.Array.data[0].m_Path
-      value: <XRController>{LeftHand}/triggerPressed
-      objectReference: {fileID: 0}
-    - target: {fileID: 1346845299948209327, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
-      propertyPath: m_ActivateAction.m_Action.m_SingletonActionBindings.Array.data[0].m_Path
-      value: <XRController>{LeftHand}/triggerPressed
-      objectReference: {fileID: 0}
-    - target: {fileID: 1346845299948209327, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
-      propertyPath: m_SelectAction.m_Action.m_SingletonActionBindings.Array.data[0].m_Action
-      value: Select
-      objectReference: {fileID: 0}
-    - target: {fileID: 1346845299948209327, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
-      propertyPath: m_ActivateAction.m_Action.m_SingletonActionBindings.Array.data[0].m_Action
-      value: Activate
-      objectReference: {fileID: 0}
-    - target: {fileID: 1346845300841405764, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
-      propertyPath: m_ModelPrefab
-      value: 
-      objectReference: {fileID: 8846144666279271817, guid: a041044bec593364a9a842eb2e843942, type: 3}
-    - target: {fileID: 1346845300841405764, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
-      propertyPath: m_SelectAction.m_UseReference
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1346845300841405764, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
-      propertyPath: m_ActivateAction.m_UseReference
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1346845300841405764, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
-      propertyPath: m_SelectAction.m_Action.m_SingletonActionBindings.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1346845300841405764, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
-      propertyPath: m_ActivateAction.m_Action.m_SingletonActionBindings.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1346845300841405764, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
-      propertyPath: m_SelectAction.m_Action.m_SingletonActionBindings.Array.data[0].m_Id
-      value: 59d0b691-1cf4-4591-b377-7d9ebcc2533b
-      objectReference: {fileID: 0}
-    - target: {fileID: 1346845300841405764, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
-      propertyPath: m_ActivateAction.m_Action.m_SingletonActionBindings.Array.data[0].m_Id
-      value: fa2bb7be-95e0-4746-bfa4-235738727724
-      objectReference: {fileID: 0}
-    - target: {fileID: 1346845300841405764, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
-      propertyPath: m_SelectAction.m_Action.m_SingletonActionBindings.Array.data[0].m_Path
-      value: <XRController>{RightHand}/triggerPressed
-      objectReference: {fileID: 0}
-    - target: {fileID: 1346845300841405764, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
-      propertyPath: m_ActivateAction.m_Action.m_SingletonActionBindings.Array.data[0].m_Path
-      value: <XRController>{RightHand}/triggerPressed
-      objectReference: {fileID: 0}
-    - target: {fileID: 1346845300841405764, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
-      propertyPath: m_SelectAction.m_Action.m_SingletonActionBindings.Array.data[0].m_Action
-      value: Select
-      objectReference: {fileID: 0}
-    - target: {fileID: 1346845300841405764, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
-      propertyPath: m_ActivateAction.m_Action.m_SingletonActionBindings.Array.data[0].m_Action
-      value: Activate
-      objectReference: {fileID: 0}
     - target: {fileID: 1498535004650126512, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
       propertyPath: m_Parameters.widthMultiplier
-      value: 0.0071
-      objectReference: {fileID: 0}
-    - target: {fileID: 1498535004650126512, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
-      propertyPath: m_Parameters.colorGradient.key0.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1498535004650126512, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
-      propertyPath: m_Parameters.colorGradient.key0.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1498535004650126512, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
-      propertyPath: m_Parameters.colorGradient.key1.g
-      value: 0.6509804
-      objectReference: {fileID: 0}
-    - target: {fileID: 1498535004650126513, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
-      propertyPath: m_LineWidth
-      value: 0.0071
-      objectReference: {fileID: 0}
-    - target: {fileID: 1498535004650126513, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
-      propertyPath: m_ValidColorGradient.key1.g
-      value: 0.64960265
-      objectReference: {fileID: 0}
-    - target: {fileID: 1498535004650126513, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
-      propertyPath: m_ValidColorGradient.key1.r
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1498535004650126515, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
-      propertyPath: m_Name
-      value: ' LeftHand Controller'
-      objectReference: {fileID: 0}
-    - target: {fileID: 1498535004650126519, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
-      propertyPath: m_LineType
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1498535004650126519, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
-      propertyPath: m_Velocity
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1498535004650126519, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
-      propertyPath: m_SampleFrequency
-      value: 100
+      value: 0.02
       objectReference: {fileID: 0}
     - target: {fileID: 1498535004650126519, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 3446258454398551040}
-    - target: {fileID: 1498535004650126519, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
-      propertyPath: m_KeepSelectedTargetValid
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1498535005209414884, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
       propertyPath: m_Name
       value: Camera Offset
@@ -639,53 +470,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1498535005821314392, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
-      propertyPath: m_LineWidth
-      value: 0.0071
-      objectReference: {fileID: 0}
-    - target: {fileID: 1498535005821314392, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
-      propertyPath: m_ValidColorGradient.key1.g
-      value: 0.64960265
-      objectReference: {fileID: 0}
-    - target: {fileID: 1498535005821314392, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
-      propertyPath: m_ValidColorGradient.key1.r
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1498535005821314398, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
-      propertyPath: m_LineType
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1498535005821314398, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
-      propertyPath: m_Velocity
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1498535005821314398, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
-      propertyPath: m_SampleFrequency
-      value: 100
-      objectReference: {fileID: 0}
     - target: {fileID: 1498535005821314398, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 3446258454398551040}
-    - target: {fileID: 1498535005821314398, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
-      propertyPath: m_KeepSelectedTargetValid
-      value: 0
+    - target: {fileID: 1498535005821314399, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
+      propertyPath: m_UseWorldSpace
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1498535005821314399, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
       propertyPath: m_Parameters.widthMultiplier
-      value: 0.0071
-      objectReference: {fileID: 0}
-    - target: {fileID: 1498535005821314399, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
-      propertyPath: m_Parameters.colorGradient.key0.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1498535005821314399, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
-      propertyPath: m_Parameters.colorGradient.key0.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1498535005821314399, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
-      propertyPath: m_Parameters.colorGradient.key1.g
-      value: 0.6509804
+      value: 0.02
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
@@ -702,5 +497,15 @@ Transform:
 --- !u!1 &467012132979922284 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1498535005603259642, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
+  m_PrefabInstance: {fileID: 1346845301182869910}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &467012134182587684 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1498535004650126514, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
+  m_PrefabInstance: {fileID: 1346845301182869910}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &467012133198959823 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1498535005821314393, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
   m_PrefabInstance: {fileID: 1346845301182869910}
   m_PrefabAsset: {fileID: 0}
