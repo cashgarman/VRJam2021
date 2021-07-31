@@ -15,12 +15,12 @@ C:/Users/Kristen/Desktop/Unity_Game_Files/VRJam2021
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-54259
+63692
 Successfully changed project path to: C:/Users/Kristen/Desktop/Unity_Game_Files/VRJam2021
 C:/Users/Kristen/Desktop/Unity_Game_Files/VRJam2021
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 144.50 ms, found 6 plugins.
-Preloading 1 native plugins for Editor in 1.10 ms.
+Refreshing native plugins compatible for Editor in 154.94 ms, found 6 plugins.
+Preloading 1 native plugins for Editor in 1.80 ms.
 Initialize engine version: 2021.1.15f1 (e767a7370072)
 [Subsystems] Discovering subsystems at path C:/Users/Kristen/Desktop/Unity/2021.1.15f1/Editor/Data/Resources/UnitySubsystems
 [Subsystems] Discovering subsystems at path C:/Users/Kristen/Desktop/Unity_Game_Files/VRJam2021/Assets
@@ -35,56 +35,56 @@ Initialize mono
 Mono path[0] = 'C:/Users/Kristen/Desktop/Unity/2021.1.15f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Users/Kristen/Desktop/Unity/2021.1.15f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Users/Kristen/Desktop/Unity/2021.1.15f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56488
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56368
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Users/Kristen/Desktop/Unity/2021.1.15f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Users/Kristen/Desktop/Unity/2021.1.15f1/Editor/Data/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
 Register platform support module: C:/Users/Kristen/Desktop/Unity/2021.1.15f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002176 seconds.
+Registered in 0.002385 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 140.83 ms, found 6 plugins.
-Preloading 1 native plugins for Editor in 0.16 ms.
+Refreshing native plugins compatible for Editor in 137.82 ms, found 6 plugins.
+Preloading 1 native plugins for Editor in 0.18 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.875 seconds
+- Completed reload, in  1.936 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1875ms)
-		BeginReloadAssembly (54ms)
+	ReloadAssembly (1937ms)
+		BeginReloadAssembly (47ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (501ms)
-			LoadAssemblies (52ms)
+		EndReloadAssembly (492ms)
+			LoadAssemblies (45ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (162ms)
+			SetupTypeCache (156ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (27ms)
-			SetupLoadedEditorAssemblies (271ms)
+			RebuildScriptCaches (28ms)
+			SetupLoadedEditorAssemblies (265ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (8ms)
+				InitializePlatformSupportModulesInManaged (7ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (141ms)
-				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (92ms)
-				ProcessInitializeOnLoadMethodAttributes (28ms)
+				RefreshPlugins (138ms)
+				BeforeProcessingInitializeOnLoad (2ms)
+				ProcessInitializeOnLoadAttributes (90ms)
+				ProcessInitializeOnLoadMethodAttributes (27ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.007436 seconds.
+Registered in 0.006618 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\Users\Kristen\Desktop\Unity_Game_Files\VRJam2021\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\Users\Kristen\Desktop\Unity_Game_Files\VRJam2021\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 146.66 ms, found 6 plugins.
+Refreshing native plugins compatible for Editor in 150.55 ms, found 6 plugins.
 Preloading 1 native plugins for Editor in 0.21 ms.
 [XR] OculusXRPlugin: registering subsystems
 [XR] Unable to register display lifecyle provider: [1]
@@ -106,29 +106,29 @@ UnityEngine.Debug:LogError (object)
 UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
 
 Mono: successfully reloaded assembly
-- Completed reload, in  1.791 seconds
+- Completed reload, in  1.722 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1791ms)
-		BeginReloadAssembly (148ms)
+	ReloadAssembly (1723ms)
+		BeginReloadAssembly (137ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (4ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (25ms)
-		EndReloadAssembly (1586ms)
+			CreateAndSetChildDomain (22ms)
+		EndReloadAssembly (1525ms)
 			LoadAssemblies (91ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (454ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (65ms)
-			SetupLoadedEditorAssemblies (865ms)
+			SetupTypeCache (418ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (71ms)
+			SetupLoadedEditorAssemblies (835ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (7ms)
+				InitializePlatformSupportModulesInManaged (6ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (147ms)
-				BeforeProcessingInitializeOnLoad (109ms)
-				ProcessInitializeOnLoadAttributes (575ms)
-				ProcessInitializeOnLoadMethodAttributes (21ms)
+				RefreshPlugins (151ms)
+				BeforeProcessingInitializeOnLoad (113ms)
+				ProcessInitializeOnLoadAttributes (545ms)
+				ProcessInitializeOnLoadMethodAttributes (15ms)
 				AfterProcessingInitializeOnLoad (5ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
@@ -136,15 +136,15 @@ Domain Reload Profiling:
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
-Refreshing native plugins compatible for Editor in 2.11 ms, found 6 plugins.
-Preloading 1 native plugins for Editor in 0.13 ms.
-Unloading 5328 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 291.0 MB.
-System memory in use after: 285.3 MB.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
+Refreshing native plugins compatible for Editor in 2.98 ms, found 6 plugins.
+Preloading 1 native plugins for Editor in 0.22 ms.
+Unloading 5389 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 293.2 MB.
+System memory in use after: 293.6 MB.
 
-Unloading 166 unused Assets to reduce memory usage. Loaded Objects now: 5757.
-Total: 5.196000 ms (FindLiveObjects: 0.620800 ms CreateObjectMapping: 0.159900 ms MarkObjects: 3.240900 ms  DeleteObjects: 1.172800 ms)
+Unloading 162 unused Assets to reduce memory usage. Loaded Objects now: 5826.
+Total: 9.361200 ms (FindLiveObjects: 2.181500 ms CreateObjectMapping: 0.758700 ms MarkObjects: 6.030800 ms  DeleteObjects: 0.387900 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -158,7 +158,217 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  path: Assets/Samples/XR Interaction Toolkit/1.0.0-pre.4/Default Input Actions/XRI Default Input Actions.inputactions
-  artifactKey: Guid(c348712bda248c246b8c49b3db54643f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Samples/XR Interaction Toolkit/1.0.0-pre.4/Default Input Actions/XRI Default Input Actions.inputactions using Guid(c348712bda248c246b8c49b3db54643f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1bac7228c5c8bb133a8deac6f3dce76f') in 0.040149 seconds 
+  path: Assets/3rdParty/BOXOPHOBIC
+  artifactKey: Guid(3458b95ab80f417499e5586ee5cecdea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3rdParty/BOXOPHOBIC using Guid(3458b95ab80f417499e5586ee5cecdea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '20433bd9050b0c91f389de1c68096769') in 0.018405 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.428820 seconds.
+  path: Assets/3rdParty/BOXOPHOBIC/Skybox Cubemap Extended
+  artifactKey: Guid(06fe4632bd09e57468b68c174e122233) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3rdParty/BOXOPHOBIC/Skybox Cubemap Extended using Guid(06fe4632bd09e57468b68c174e122233) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3457226c225e57def5945b7a5bb0ef3c') in 0.005654 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.366858 seconds.
+  path: Assets/3rdParty/BOXOPHOBIC/Skybox Cubemap Extended/Core
+  artifactKey: Guid(18556335e32be764885bcf0a6824be6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3rdParty/BOXOPHOBIC/Skybox Cubemap Extended/Core using Guid(18556335e32be764885bcf0a6824be6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '52df77cc272cbf1429b3b51194a59d67') in 0.007917 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.309470 seconds.
+  path: Assets/3rdParty/BOXOPHOBIC/Skybox Cubemap Extended/Core/Shaders
+  artifactKey: Guid(e3f53477d64695f4abc989d59212b280) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3rdParty/BOXOPHOBIC/Skybox Cubemap Extended/Core/Shaders using Guid(e3f53477d64695f4abc989d59212b280) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '88e29f7a9ffb549d53821fe479ac6a16') in 0.008478 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.822720 seconds.
+  path: Assets/3rdParty/BOXOPHOBIC/Skybox Cubemap Extended/Core/Shaders/Skybox Cubemap Blend.shader
+  artifactKey: Guid(7705790d9e8e16344ad5d7960c568904) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3rdParty/BOXOPHOBIC/Skybox Cubemap Extended/Core/Shaders/Skybox Cubemap Blend.shader using Guid(7705790d9e8e16344ad5d7960c568904) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b89da50930a1fb6937b842cfcb080b75') in 0.025260 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.393800 seconds.
+  path: Assets/3rdParty/BOXOPHOBIC/Skybox Cubemap Extended/Core/Shaders/Skybox Cubemap Extended.shader
+  artifactKey: Guid(82881a2d011b0964696411c822cdd00b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3rdParty/BOXOPHOBIC/Skybox Cubemap Extended/Core/Shaders/Skybox Cubemap Extended.shader using Guid(82881a2d011b0964696411c822cdd00b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d4d8061377c2a924e4bc0cf33a0601a') in 0.002793 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.618584 seconds.
+  path: Assets/3rdParty/BOXOPHOBIC/Skybox Cubemap Extended/Core/Editor
+  artifactKey: Guid(ddf355b9eb6a03a4dbd8990fd7311be1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3rdParty/BOXOPHOBIC/Skybox Cubemap Extended/Core/Editor using Guid(ddf355b9eb6a03a4dbd8990fd7311be1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce89910886abc4570d77d607c9bc4dd1') in 0.008431 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.022049 seconds.
+  path: Assets/3rdParty/BOXOPHOBIC/Skybox Cubemap Extended/Core/Editor/Boxophobic.SkyboxCubemapExtended.Editor.asmdef
+  artifactKey: Guid(29bc400970c5066438cbde7676418b75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3rdParty/BOXOPHOBIC/Skybox Cubemap Extended/Core/Editor/Boxophobic.SkyboxCubemapExtended.Editor.asmdef using Guid(29bc400970c5066438cbde7676418b75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '27129d603556971b868a7e6fd1116653') in 0.010189 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000413 seconds.
+  path: Assets/3rdParty/BOXOPHOBIC/Skybox Cubemap Extended/Core/Editor/Version.asset
+  artifactKey: Guid(cb530898cc05d744da0941d6160f7b92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3rdParty/BOXOPHOBIC/Skybox Cubemap Extended/Core/Editor/Version.asset using Guid(cb530898cc05d744da0941d6160f7b92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '698f896f859614766f8ab8271af5afb0') in 0.012268 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.281302 seconds.
+  path: Assets/3rdParty/BOXOPHOBIC/Skybox Cubemap Extended/Core/Functions
+  artifactKey: Guid(7f2ce50d7f6bdaa4c9b0717b74137465) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3rdParty/BOXOPHOBIC/Skybox Cubemap Extended/Core/Functions using Guid(7f2ce50d7f6bdaa4c9b0717b74137465) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '69f28bcfef23a737e47edba105dda36b') in 0.008597 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.401601 seconds.
+  path: Assets/3rdParty/BOXOPHOBIC/Skybox Cubemap Extended/Demo
+  artifactKey: Guid(de9e928d9c90c1d43a73ded89b05d1cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3rdParty/BOXOPHOBIC/Skybox Cubemap Extended/Demo using Guid(de9e928d9c90c1d43a73ded89b05d1cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a1f284fe644b280ac8b6c45e6c1b938') in 0.008677 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.210974 seconds.
+  path: Assets/3rdParty/BOXOPHOBIC/Skybox Cubemap Extended/Demo/Demo Day.unity
+  artifactKey: Guid(67adac43bcf286444be612074ab04f75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3rdParty/BOXOPHOBIC/Skybox Cubemap Extended/Demo/Demo Day.unity using Guid(67adac43bcf286444be612074ab04f75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0494b757948a0af07c46390e834c079b') in 0.008472 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 298.187480 seconds.
+  path: Assets/FBX 2013/Helicopter_01.fbx
+  artifactKey: Guid(25ae238bfe4d2fc48ab841466c03fd2f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FBX 2013/Helicopter_01.fbx using Guid(25ae238bfe4d2fc48ab841466c03fd2f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cef0a5a4c68fbe67217acfc6c610493d') in 0.120290 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.253162 seconds.
+  path: Assets/Scenes/TheWorld.unity
+  artifactKey: Guid(2fe2c032dae85894887b0c3d508d0cf0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/TheWorld.unity using Guid(2fe2c032dae85894887b0c3d508d0cf0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6dd3b5e48816fbd590e956165ce87387') in 0.008800 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 41.198218 seconds.
+  path: Assets/Lee Workspace/helo.blend
+  artifactKey: Guid(882c26f4367c02c469b338ab56494218) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Lee Workspace/helo.blend using Guid(882c26f4367c02c469b338ab56494218) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '14e247314310a963f252b327f9515412') in 0.033799 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 140.008980 seconds.
+  path: Assets/3rdParty/BOXOPHOBIC/Skybox Cubemap Extended/Core/Editor/SkyboxExtendedHub.cs
+  artifactKey: Guid(749c07eaa2f91bc4f81ccd7adddcb723) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3rdParty/BOXOPHOBIC/Skybox Cubemap Extended/Core/Editor/SkyboxExtendedHub.cs using Guid(749c07eaa2f91bc4f81ccd7adddcb723) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3396bff853a59b1b567fde15bc881165') in 0.010283 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.901498 seconds.
+  path: Assets/3rdParty/BOXOPHOBIC/Skybox Cubemap Extended/Core/Editor/SkyboxExtendedShaderGUI.cs
+  artifactKey: Guid(39b7f3695c062924983675fcef51f7f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3rdParty/BOXOPHOBIC/Skybox Cubemap Extended/Core/Editor/SkyboxExtendedShaderGUI.cs using Guid(39b7f3695c062924983675fcef51f7f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '68ddef5cd8b04d72f5a83635cfb996f2') in 0.010403 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.214069 seconds.
+  path: Assets/3rdParty/BOXOPHOBIC/Skybox Cubemap Extended/Core/Editor/SkyboxExtendedWindows.cs
+  artifactKey: Guid(7c986bd7ffe2fa34a857eb813db03d77) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3rdParty/BOXOPHOBIC/Skybox Cubemap Extended/Core/Editor/SkyboxExtendedWindows.cs using Guid(7c986bd7ffe2fa34a857eb813db03d77) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd5cf3fe91809af3c94eb0e52632ef743') in 0.009782 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.132261 seconds.
+  path: Assets/3rdParty/BOXOPHOBIC/Skybox Cubemap Extended/Core/Functions/Compute Rotation Y.asset
+  artifactKey: Guid(693b7d13a80c93a4e8b791a9cd5e5ab2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3rdParty/BOXOPHOBIC/Skybox Cubemap Extended/Core/Functions/Compute Rotation Y.asset using Guid(693b7d13a80c93a4e8b791a9cd5e5ab2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '74f63c290355c5b00c30883021304512') in 0.010365 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 18.278191 seconds.
+  path: Assets/3rdParty/BOXOPHOBIC/User/User.pdf
+  artifactKey: Guid(983558b57a284d84bbc541f947bc5139) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3rdParty/BOXOPHOBIC/User/User.pdf using Guid(983558b57a284d84bbc541f947bc5139) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'abbd0f2a3255aeaaeb7473a50da4c621') in 0.011647 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.170756 seconds.
+  path: Assets/3rdParty/BOXOPHOBIC/Utils/Resources
+  artifactKey: Guid(90bc80fda3a54e2439aef2dae0c8a14e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3rdParty/BOXOPHOBIC/Utils/Resources using Guid(90bc80fda3a54e2439aef2dae0c8a14e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e7ad69e3fb2b1bd5b033a6c4255aaa29') in 0.008428 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.033757 seconds.
+  path: Assets/3rdParty/BOXOPHOBIC/Utils/Resources/Boxophobic - BannerBegin.psd
+  artifactKey: Guid(9515108b8376ad7418e8138858201b72) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3rdParty/BOXOPHOBIC/Utils/Resources/Boxophobic - BannerBegin.psd using Guid(9515108b8376ad7418e8138858201b72) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b8b6de5d20abc6302196b243da90c7e7') in 0.022346 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000231 seconds.
+  path: Assets/3rdParty/BOXOPHOBIC/Utils/Resources/Boxophobic - BannerMiddle.psd
+  artifactKey: Guid(e3767adfa5dac5544830cd097ef6c09f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3rdParty/BOXOPHOBIC/Utils/Resources/Boxophobic - BannerMiddle.psd using Guid(e3767adfa5dac5544830cd097ef6c09f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a82c6141ecb357dbb4d154795d5598d') in 0.014246 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000196 seconds.
+  path: Assets/3rdParty/BOXOPHOBIC/Utils/Resources/Boxophobic - IconHelp.psd
+  artifactKey: Guid(b676a215be26cba488e51c0dda84e72d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3rdParty/BOXOPHOBIC/Utils/Resources/Boxophobic - IconHelp.psd using Guid(b676a215be26cba488e51c0dda84e72d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '394f7bffdfab335610e332b934bea1b2') in 0.015896 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000338 seconds.
+  path: Assets/3rdParty/BOXOPHOBIC/Utils/Resources/Boxophobic - CategoryBegin.psd
+  artifactKey: Guid(97ec2262fb592f94a9569e156ea65d7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3rdParty/BOXOPHOBIC/Utils/Resources/Boxophobic - CategoryBegin.psd using Guid(97ec2262fb592f94a9569e156ea65d7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '51c1a33b09faa0fbce15776d32360d9e') in 0.015549 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000291 seconds.
+  path: Assets/3rdParty/BOXOPHOBIC/Utils/Resources/Boxophobic - BannerEnd.psd
+  artifactKey: Guid(0dd3fbd5475976a4aa96298afc680d17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3rdParty/BOXOPHOBIC/Utils/Resources/Boxophobic - BannerEnd.psd using Guid(0dd3fbd5475976a4aa96298afc680d17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9e3968a5f00bde9de22804eae6a11628') in 0.014425 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000290 seconds.
+  path: Assets/3rdParty/BOXOPHOBIC/Utils/Resources/Boxophobic - Logo.png
+  artifactKey: Guid(4ebb9926546381046a4271ece54ce919) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3rdParty/BOXOPHOBIC/Utils/Resources/Boxophobic - Logo.png using Guid(4ebb9926546381046a4271ece54ce919) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2b524614d8eaa26bc1feebb3e5d3f32f') in 0.019155 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000242 seconds.
+  path: Assets/3rdParty/BOXOPHOBIC/Utils/Resources/Boxophobic - CategoryEnd.psd
+  artifactKey: Guid(e1c856352cf5b9b479ddb80c85c84cd5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3rdParty/BOXOPHOBIC/Utils/Resources/Boxophobic - CategoryEnd.psd using Guid(e1c856352cf5b9b479ddb80c85c84cd5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dcc919db9741c8ec69fd9aaec0adba10') in 0.011487 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000199 seconds.
+  path: Assets/3rdParty/BOXOPHOBIC/Utils/Resources/Boxophobic - IconEdit.psd
+  artifactKey: Guid(cf593cb3310b7784a8f0967b8ba89b02) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3rdParty/BOXOPHOBIC/Utils/Resources/Boxophobic - IconEdit.psd using Guid(cf593cb3310b7784a8f0967b8ba89b02) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e349ee51bac459e861a340e20ade8fd1') in 0.011383 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000322 seconds.
+  path: Assets/3rdParty/BOXOPHOBIC/Utils/Resources/Boxophobic - CategoryMiddle.psd
+  artifactKey: Guid(106fc33e3a3dab34f89693e3ed333fa2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3rdParty/BOXOPHOBIC/Utils/Resources/Boxophobic - CategoryMiddle.psd using Guid(106fc33e3a3dab34f89693e3ed333fa2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8b447c3933e94c21abddaae81f8bfcf1') in 0.012202 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.002096 seconds.
+  path: Assets/3rdParty/BOXOPHOBIC/Utils/Scripts
+  artifactKey: Guid(9ec3a38b6858ee54685444ad9afdd646) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3rdParty/BOXOPHOBIC/Utils/Scripts using Guid(9ec3a38b6858ee54685444ad9afdd646) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6eee8321f642f7df79f8cd82ebe0fe90') in 0.007386 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.034826 seconds.
+  path: Assets/3rdParty/BOXOPHOBIC/Utils/Scripts/Boxophobic.Utils.Scripts.asmdef
+  artifactKey: Guid(825ad574da7360d4e8aea558f272972e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3rdParty/BOXOPHOBIC/Utils/Scripts/Boxophobic.Utils.Scripts.asmdef using Guid(825ad574da7360d4e8aea558f272972e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c57d4688167f55573f4d58e4bd369c1') in 0.006753 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.769416 seconds.
+  path: Assets/3rdParty/BOXOPHOBIC/Utils/Editor
+  artifactKey: Guid(1ef1e41b6d86c1b45ac76cb263c1447a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3rdParty/BOXOPHOBIC/Utils/Editor using Guid(1ef1e41b6d86c1b45ac76cb263c1447a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ec10658dbdb0468b6b8674c3bf95311') in 0.002062 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.042081 seconds.
+  path: Assets/3rdParty/BOXOPHOBIC/Utils/Editor/Boxophobic.Utils.Editor.asmdef
+  artifactKey: Guid(10f1dd4cfd6afb54da274d7d818bd8f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3rdParty/BOXOPHOBIC/Utils/Editor/Boxophobic.Utils.Editor.asmdef using Guid(10f1dd4cfd6afb54da274d7d818bd8f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0bc67a5874eebe5b87f48aea9cd5d20c') in 0.008327 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000282 seconds.
+  path: Assets/3rdParty/BOXOPHOBIC/Utils/Editor/Version.asset
+  artifactKey: Guid(a15c57a0379e088458f4b54715babf2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3rdParty/BOXOPHOBIC/Utils/Editor/Version.asset using Guid(a15c57a0379e088458f4b54715babf2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd843050a41e11776ed13cc3410deb695') in 0.002829 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 10.274719 seconds.
+  path: Assets/3rdParty/BOXOPHOBIC/Skybox Cubemap Extended/Skybox Cubemap Extended.pdf
+  artifactKey: Guid(5cbce0d58b9d6d147bde7b2601194b85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3rdParty/BOXOPHOBIC/Skybox Cubemap Extended/Skybox Cubemap Extended.pdf using Guid(5cbce0d58b9d6d147bde7b2601194b85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f8dbc7af694f877bcd7760ed136628e') in 0.003516 seconds 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
