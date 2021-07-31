@@ -1,29 +1,36 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class FauxGravityBody : MonoBehaviour
 {
-    public FauxGravityAttractor attractor;
-    private Transform myTransform;
+    public bool freezeRotation = true;
+    
+    private FauxGravityAttractor attractor;
 
     private void Awake()
     {
         if (attractor == null)
             attractor = FindObjectOfType<FauxGravityAttractor>();
+
+        var rigidBody = GetComponent<Rigidbody>();
+        
+        // If the object doesn't already have a physics material
+        var collider = rigidBody.GetComponent<Collider>();
+        if (collider.material == null)
+            // Use the default physics material
+            collider.material = PhysicsManager.DefaultPhysicsMaterial;
+        
+        rigidBody.useGravity = false;
+        rigidBody.drag = PhysicsManager.DefaultDrag;
     }
 
-    void Start()
+    private void Start()
     {
-        GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation;
-        GetComponent<Rigidbody>().useGravity = false;
-        myTransform = transform;
+        if(freezeRotation)
+            GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        attractor.Attract(myTransform);
+        attractor.Attract(transform);
     }
 }

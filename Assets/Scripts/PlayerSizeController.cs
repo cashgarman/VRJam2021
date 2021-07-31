@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class PlayerSizeController : MonoBehaviour
 {
@@ -14,10 +15,16 @@ public class PlayerSizeController : MonoBehaviour
     private float _startingDistance;
     private Vector3 _resizeStartScale;
     private Vector3 _initialScale;
+    [SerializeField] private XRRayInteractor[] _rays;
+    [SerializeField] private LineRenderer[] _lineRenderers;
+    [SerializeField] private float _maxScale;
+    [SerializeField] private float _maxRayEndPointDistance = 1000f;
+    [SerializeField] private float _maxRayWidth = 0.75f;
 
     private void Awake()
     {
         _initialScale = transform.localScale;
+        UpdateRay();
     }
 
     public void OnLeftResizeActivated(InputAction.CallbackContext context)
@@ -56,10 +63,26 @@ public class PlayerSizeController : MonoBehaviour
             // Get the current local space distance between the controllers
             var distance = Vector3.Distance(_leftController.localPosition, _rightController.localPosition) / _maxControllerSpread;
             
-            var percentStretched = (distance - _startingDistance) / _maxControllerSpread + 1f;
-            
-            transform.localScale = _resizeStartScale * percentStretched;
+            var scalePercent = (_startingDistance - distance) / _maxControllerSpread + 1f;
+            transform.localScale = _resizeStartScale * scalePercent;
+
+            UpdateRay();
         }
+    }
+
+    private void UpdateRay()
+    {
+        // Scale down the ray interactor and ray line renderer width
+        var scaleFactor = transform.localScale.magnitude / _maxScale;
+        foreach (var ray in _rays)
+        {
+            ray.endPointDistance = Mathf.Lerp(_maxRayEndPointDistance, 0f, scaleFactor);
+            ray.controlPointDistance = Mathf.Lerp(_maxRayEndPointDistance / 2f, 0f, scaleFactor);
+            ray.controlPointHeight = Mathf.Lerp(_maxRayEndPointDistance / 4f, 0f, scaleFactor);
+        }
+
+        foreach (var lineRenderer in _lineRenderers)
+            lineRenderer.widthMultiplier = scaleFactor;
     }
 
     private void OnGUI()

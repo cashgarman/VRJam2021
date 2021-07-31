@@ -16,6 +16,8 @@ GameObject:
   - component: {fileID: 4626207873206879299}
   - component: {fileID: 803914189637188741}
   - component: {fileID: 5945626914153322758}
+  - component: {fileID: 3738692855560742901}
+  - component: {fileID: 3230815911315320403}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -101,7 +103,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b50b693dbe0a054193b4e527f318dbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attractor: {fileID: 0}
+  freezeRotation: 0
 --- !u!114 &4626207873206879299
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -115,7 +117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Timeout: 10
-  m_XRRig: {fileID: 0}
+  m_XRRig: {fileID: 467012133957935777}
 --- !u!114 &803914189637188741
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -128,7 +130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b86d19e5790d324883bd25ee2af8cd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_System: {fileID: 0}
+  m_System: {fileID: 4626207873206879299}
 --- !u!114 &5945626914153322758
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -141,9 +143,73 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 151b3a5017690924a93c22072ed28cad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _leftController: {fileID: 467012134182587684}
-  _rightController: {fileID: 467012133198959823}
-  _maxControllerSpread: 1.3
+  _leftController: {fileID: 3117039644553630993}
+  _rightController: {fileID: 8058393284689541525}
+  _maxControllerSpread: 0.5
+  _rays:
+  - {fileID: 8982316304089090264}
+  - {fileID: 40735829172192343}
+  _lineRenderers:
+  - {fileID: 6254260611812010123}
+  - {fileID: 8283312858506890383}
+  _maxScale: 10
+  _maxRayEndPointDistance: 1000
+  _maxRayWidth: 0.75
+--- !u!114 &3738692855560742901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 467012133957935781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bf296fc962d7184ab14ad1841598d5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_System: {fileID: 4626207873206879299}
+  m_MoveSpeed: 1
+  m_EnableStrafe: 1
+  m_UseGravity: 0
+  m_GravityApplicationMode: 0
+  m_ForwardSource: {fileID: 0}
+  m_LeftHandMoveAction:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Left Hand Move
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 778896b8-7ad0-4092-b63e-1bafbf2c4193
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+    m_Reference: {fileID: 6972639530819350904, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  m_RightHandMoveAction:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Right Hand Move
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 554013c7-a033-4d7b-97c9-ff9ab9c1e124
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+    m_Reference: {fileID: -8198699208435500284, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+--- !u!114 &3230815911315320403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 467012133957935781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c788d572ac254020b1da0ac43a978bfa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _leftController: {fileID: 5294536128327110304}
+  _rightController: {fileID: 4050411842416700316}
+  teleportRayShowButton: 6
 --- !u!1 &5168115263306713117
 GameObject:
   m_ObjectHideFlags: 0
@@ -236,7 +302,19 @@ MonoBehaviour:
     m_ActionId: 33754c03-48ec-46ef-9bc6-22ed6bfdd8e8
     m_ActionName: XRI LeftHand/Select
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: WorldTeleportation, Assembly-CSharp
+        m_MethodName: Teleport
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 0c0991c5-d329-4afc-8892-1076b440477c
     m_ActionName: XRI LeftHand/Activate
   - m_PersistentCalls:
@@ -252,11 +330,35 @@ MonoBehaviour:
     m_ActionId: cbeaf823-3b69-4004-8ec8-13ea2ca3fc31
     m_ActionName: XRI LeftHand/Teleport Select
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: WorldTeleportation, Assembly-CSharp
+        m_MethodName: ShowTeleportRay
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: a21db72c-4843-4839-b4d0-3ce8d287cb86
     m_ActionName: XRI LeftHand/Teleport Mode Activate
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: WorldTeleportation, Assembly-CSharp
+        m_MethodName: HideTeleportRay
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 89ce8348-6001-41a3-85b9-f8f2e2dcad7c
     m_ActionName: XRI LeftHand/Teleport Mode Cancel
   - m_PersistentCalls:
@@ -304,7 +406,19 @@ MonoBehaviour:
     m_ActionId: ac96c10b-c955-4a46-8e67-bf16bc069b53
     m_ActionName: XRI RightHand/Select
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 41976d89-60de-4deb-bff9-16b4af96b290
     m_ActionName: XRI RightHand/Activate
   - m_PersistentCalls:
@@ -320,11 +434,35 @@ MonoBehaviour:
     m_ActionId: 02e43582-8973-4940-af06-dff6158e3df2
     m_ActionName: XRI RightHand/Teleport Select
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: WorldTeleportation, Assembly-CSharp
+        m_MethodName: ShowTeleportRay
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: a6c7231d-c55d-4dd4-9e87-877bb5522ef5
     m_ActionName: XRI RightHand/Teleport Mode Activate
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: WorldTeleportation, Assembly-CSharp
+        m_MethodName: HideTeleportRay
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: d587b60c-39a0-4365-8075-477ce484ba0f
     m_ActionName: XRI RightHand/Teleport Mode Cancel
   - m_PersistentCalls:
@@ -414,9 +552,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 467012133957935776}
     m_Modifications:
-    - target: {fileID: 1498535004650126512, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
-      propertyPath: m_Parameters.widthMultiplier
-      value: 0.02
+    - target: {fileID: 1498535004650126519, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
+      propertyPath: m_SampleFrequency
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 1498535004650126519, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
       propertyPath: m_InteractionManager
@@ -471,16 +609,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1498535005821314398, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
+      propertyPath: m_SampleFrequency
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1498535005821314398, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 3446258454398551040}
     - target: {fileID: 1498535005821314399, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
       propertyPath: m_UseWorldSpace
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1498535005821314399, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
-      propertyPath: m_Parameters.widthMultiplier
-      value: 0.02
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
@@ -499,13 +637,67 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1498535005603259642, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
   m_PrefabInstance: {fileID: 1346845301182869910}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &467012134182587684 stripped
+--- !u!4 &3117039644553630993 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 1498535004650126514, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
+  m_CorrespondingSourceObject: {fileID: 4175126717016663175, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
   m_PrefabInstance: {fileID: 1346845301182869910}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &467012133198959823 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1498535005821314393, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
+--- !u!114 &8982316304089090264 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7932929926968555854, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
   m_PrefabInstance: {fileID: 1346845301182869910}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6803edce0201f574f923fd9d10e5b30a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!120 &6254260611812010123 stripped
+LineRenderer:
+  m_CorrespondingSourceObject: {fileID: 4934656880517388573, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
+  m_PrefabInstance: {fileID: 1346845301182869910}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5294536128327110304 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6613830880739753782, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
+  m_PrefabInstance: {fileID: 1346845301182869910}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ae26e19cd956134bbdf3c6f65bf393a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &8058393284689541525 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9035871585239074819, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
+  m_PrefabInstance: {fileID: 1346845301182869910}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &40735829172192343 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1306129306809284033, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
+  m_PrefabInstance: {fileID: 1346845301182869910}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6803edce0201f574f923fd9d10e5b30a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!120 &8283312858506890383 stripped
+LineRenderer:
+  m_CorrespondingSourceObject: {fileID: 6936890886488997145, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
+  m_PrefabInstance: {fileID: 1346845301182869910}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4050411842416700316 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3063855904070883850, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
+  m_PrefabInstance: {fileID: 1346845301182869910}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ae26e19cd956134bbdf3c6f65bf393a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
