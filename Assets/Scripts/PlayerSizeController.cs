@@ -61,4 +61,11 @@ public class PlayerSizeController : MonoBehaviour
             transform.localScale = _resizeStartScale * percentStretched;
         }
     }
+
+    private void OnGUI()
+    {
+        GUILayout.Label($"Player local scale: {transform.localScale}");
+        GUILayout.Label($"Player world scale: {transform.lossyScale}");
+        GUILayout.Label($"Approximate player height (Unity units): {GetComponent<CapsuleCollider>().height * transform.lossyScale}");
+    }
 }
