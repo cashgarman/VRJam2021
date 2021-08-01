@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
-public class ClimbInteractable : XRBaseInteractable
+public class ClimbInteractable : MonoBehaviour
 {
-    protected override void OnSelectEntered(XRBaseInteractor interactor)
+    public void Grabbed()
     {
-        base.OnSelectEntered(interactor);
-    }
+        
+    } 
 
-    protected override void OnSelectExited(XRBaseInteractor interactor)
+    public void Released()
     {
-        base.OnSelectExited(interactor);
+        Debug.Log("Released");
     }
 }
