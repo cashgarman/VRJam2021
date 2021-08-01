@@ -1,19 +1,25 @@
 ﻿using System;
+using System.Collections;
 using System.Linq;
+using UI;
 using UnityEngine;
 
 public class Achievements : MonoBehaviour
 {
 	[Serializable]
-	private class Achievement
+	public class Achievement
 	{
 		public string name;
 		public string description;
 		public bool awarded;
+		public Sprite icon;
 	}
 	
 	private static Achievements _instance;
 	[SerializeField] private Achievement[] _achievements;
+	[SerializeField] private AchievementNotification _achievementNotificationPrefab;
+	[SerializeField] private Transform _achievementSpawnPoint;
+	[SerializeField] private float _notificationDuration = 5f;
 
 	private void Awake()
 	{
@@ -45,8 +51,21 @@ public class Achievements : MonoBehaviour
 		Debug.Log($"Awarded achievement {achievement.name}");
 		achievement.awarded = true;
 		
+		// Show the notification
+		StartCoroutine(ShowAchievementNotification(achievement));
+		
 		// Save
 		Save();
+	}
+
+	private IEnumerator ShowAchievementNotification(Achievement achievement)
+	{
+		var notification = Instantiate(_achievementNotificationPrefab, _achievementSpawnPoint.position, Quaternion.identity, _achievementSpawnPoint);
+		notification.Init(achievement);
+
+		yield return new WaitForSeconds(_notificationDuration);
+		
+		Destroy(notification.gameObject);
 	}
 
 	private void Save()

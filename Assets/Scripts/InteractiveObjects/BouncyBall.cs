@@ -10,8 +10,6 @@ namespace InteractiveObjects
 
         private void OnCollisionEnter(Collision other)
         {
-            Debug.Log($"{name} hit {other.gameObject.name}");
-            
             // If the ball bounced enough times
             if (++_bounces > _bouncesForAchievement)
                 Achievements.Award("BouncesForDays");
