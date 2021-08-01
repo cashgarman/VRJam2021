@@ -33,18 +33,18 @@ public class SphericalContinuousMoveProvider : ActionBasedContinuousMoveProvider
         // Determine frame of reference for what the input direction is relative to
         var forwardSourceTransform = xrRig.cameraGameObject.transform;
         var inputForwardInWorldSpace = forwardSourceTransform.forward;
-        if (Mathf.Approximately(Mathf.Abs(Vector3.Dot(inputForwardInWorldSpace, up)), 1f))
-        {
-            // When the input forward direction is parallel with the rig normal,
-            // it will probably feel better for the player to move along the same direction
-            // as if they tilted forward or up some rather than moving in the rig forward direction.
-            // It also will probably be a better experience to at least move in a direction
-            // rather than stopping if the head/controller is oriented such that it is perpendicular with the rig.
-            inputForwardInWorldSpace = -forwardSourceTransform.up;
-        }
+        // if (Mathf.Approximately(Mathf.Abs(Vector3.Dot(inputForwardInWorldSpace, up)), 1f))
+        // {
+        //     // When the input forward direction is parallel with the rig normal,
+        //     // it will probably feel better for the player to move along the same direction
+        //     // as if they tilted forward or up some rather than moving in the rig forward direction.
+        //     // It also will probably be a better experience to at least move in a direction
+        //     // rather than stopping if the head/controller is oriented such that it is perpendicular with the rig.
+        //     inputForwardInWorldSpace = -forwardSourceTransform.up;
+        // }
 
         var inputForwardProjectedInWorldSpace = Vector3.ProjectOnPlane(inputForwardInWorldSpace, up);
-        var forwardRotation = Quaternion.FromToRotation(rigTransform.forward, inputForwardProjectedInWorldSpace);
+        var forwardRotation = Quaternion.FromToRotation(xrRig.cameraGameObject.transform.forward, inputForwardProjectedInWorldSpace);
 
         var translationInRigSpace = forwardRotation * inputMove * (MoveSpeed * Time.deltaTime);
         var translationInWorldSpace = rigTransform.TransformDirection(translationInRigSpace);
