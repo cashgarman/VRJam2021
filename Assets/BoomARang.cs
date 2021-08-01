@@ -26,7 +26,7 @@ public class BoomARang : MonoBehaviour
         flying = true;
     }
 
-    public void grabbed()
+    public void Grabbed()
     {
         flying = false;
     }
