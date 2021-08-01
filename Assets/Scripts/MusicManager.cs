@@ -6,7 +6,7 @@ using UnityEngine;
 public enum StemType
 {
 	Synth,
-	Strings,
+	SFX,
 	Keys,
 	Bass,
 }
@@ -26,6 +26,7 @@ public class MusicManager : MonoBehaviour
 
 	public Stem[] _stems;
 	[SerializeField] private float _fadeDuration = 3f;
+	[SerializeField] private bool _playOnStart = true;
 
 	private void Awake()
 	{
@@ -44,8 +45,8 @@ public class MusicManager : MonoBehaviour
 			var source = stem._source = gameObject.AddComponent<AudioSource>();
 			source.clip = stem._clip;
 			
-			// Start the volume at zero
-			source.volume = 0f;
+			// Start the stem
+			source.volume = _playOnStart ? stem._maxVolume : 0f;
 			
 			// Play the stem
 			source.loop = true;

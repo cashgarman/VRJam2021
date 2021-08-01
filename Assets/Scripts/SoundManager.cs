@@ -5,15 +5,10 @@ using Random = UnityEngine.Random;
 public enum Sounds
 {
     None,
-    GlowstickCrack,
-    HeavyGlowstickImpact,
-    MediumGlowstickImpact,
-    LightGlowstickImpact,
-    HeavyPebbleImpact,
-    MediumPebbleImpact,
-    LightPebbleImpact,
-    GlowstickGrab,
-    PebbleGrab,
+    Scaling,
+    RayGunFire,
+    ShrinkObject,
+    GrowObject,
 }
 
 public class SoundManager : MonoBehaviour
@@ -22,6 +17,7 @@ public class SoundManager : MonoBehaviour
     private class Sound
     {
         public Sounds soundType;
+        public float volume = 1f;
         public AudioClip[] clips;
 
         public override string ToString()
@@ -81,6 +77,7 @@ public class SoundManager : MonoBehaviour
             audioSource.playOnAwake = false;
             audioSource.spatialize = true;
             audioSource.spatialBlend = 1f;
+            audioSource.volume = matchingSound.volume;
         }
 
         // Play the random sound clip from the available clips
