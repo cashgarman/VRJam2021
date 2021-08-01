@@ -6,7 +6,7 @@ public class FauxGravityBody : MonoBehaviour
     
     public FauxGravityAttractor Attractor { get; private set; }
 
-    private void Awake()
+    private void Start()
     {
         Attractor = FindObjectOfType<FauxGravityAttractor>();
 
@@ -20,16 +20,13 @@ public class FauxGravityBody : MonoBehaviour
         
         rigidBody.useGravity = false;
         rigidBody.drag = PhysicsManager.DefaultDrag;
-    }
-
-    private void Start()
-    {
+        
         if(freezeRotation)
             GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation;
     }
 
     private void Update()
     {
-        Attractor.Attract(transform);
+        Attractor.Attract(transform, freezeRotation);
     }
 }
