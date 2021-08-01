@@ -155,9 +155,9 @@ MonoBehaviour:
   - {fileID: 918647406934060530}
   _maxScale: 10
   _maxRayEndPointDistance: 1000
-  _maxRayWidth: 0.75
+  _maxRayWidth: 20
   _minScale: 0.0001
-  _rayWidth: 8
+  _rayWidth: 20
   _maxReticleScale: 1
 --- !u!114 &3230815911315320403
 MonoBehaviour:
@@ -601,6 +601,14 @@ PrefabInstance:
       value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 1306129306809284033, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
+      propertyPath: m_ControlPointHeight
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1306129306809284033, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
+      propertyPath: m_InteractionManager
+      value: 
+      objectReference: {fileID: 3446258454398551040}
+    - target: {fileID: 1306129306809284033, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
       propertyPath: m_KeepSelectedTargetValid
       value: 0
       objectReference: {fileID: 0}
@@ -660,6 +668,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1498535005603259640, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
+      propertyPath: m_ClearFlags
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1498535005603259640, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0.9749695
+      objectReference: {fileID: 0}
+    - target: {fileID: 1498535005603259640, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0.36477983
+      objectReference: {fileID: 0}
+    - target: {fileID: 1498535005603259640, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1498535005821314398, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
       propertyPath: m_SampleFrequency
       value: 100
@@ -671,6 +695,18 @@ PrefabInstance:
     - target: {fileID: 1498535005821314399, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
       propertyPath: m_UseWorldSpace
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1576713027942225409, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
+      propertyPath: m_ControlPointHeight
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1576713027942225409, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
+      propertyPath: m_InteractionManager
+      value: 
+      objectReference: {fileID: 3446258454398551040}
+    - target: {fileID: 1576713027942225409, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
+      propertyPath: m_KeepSelectedTargetValid
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2166025096648186980, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
       propertyPath: m_LineWidth
@@ -815,6 +851,70 @@ PrefabInstance:
     - target: {fileID: 7941835144694482857, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
       propertyPath: m_Radius
       value: 0.005
+      objectReference: {fileID: 0}
+    - target: {fileID: 8280067443639965244, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8280067443639965244, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
+      propertyPath: m_Parameters.widthMultiplier
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 8280067443639965244, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
+      propertyPath: m_Parameters.colorGradient.key1.g
+      value: 0.8039216
+      objectReference: {fileID: 0}
+    - target: {fileID: 8280067443639965244, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
+      propertyPath: m_Parameters.colorGradient.key1.r
+      value: 0.2784314
+      objectReference: {fileID: 0}
+    - target: {fileID: 8280067443639965244, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[0].value
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8280067443639965244, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[1].value
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 9184649850947106193, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
+      propertyPath: m_LineWidth
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 9184649850947106193, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
+      propertyPath: m_ValidColorGradient.key0.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9184649850947106193, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
+      propertyPath: m_ValidColorGradient.key0.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9184649850947106193, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
+      propertyPath: m_ValidColorGradient.key0.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9184649850947106193, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
+      propertyPath: m_ValidColorGradient.key1.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9184649850947106193, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
+      propertyPath: m_ValidColorGradient.key1.g
+      value: 0.9045069
+      objectReference: {fileID: 0}
+    - target: {fileID: 9184649850947106193, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
+      propertyPath: m_ValidColorGradient.key1.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9184649850947106193, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
+      propertyPath: m_OverrideInteractorLineLength
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9184649850947106193, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
+      propertyPath: m_WidthCurve.m_Curve.Array.data[0].value
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 9184649850947106193, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
+      propertyPath: m_WidthCurve.m_Curve.Array.data[1].value
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
