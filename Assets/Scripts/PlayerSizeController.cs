@@ -107,9 +107,12 @@ public class PlayerSizeController : MonoBehaviour
 
         foreach (var lineVisual in _lineVisuals)
         {
+            Debug.Log("scale factor: " + _scaleFactor);
             lineVisual.lineLength = Mathf.Lerp(0f, _maxRayEndPointDistance, _scaleFactor);
             lineVisual.widthCurve.keys[0].value = Mathf.Lerp(0f, _rayWidth, _scaleFactor);
+            Debug.Log("key1: " + lineVisual.widthCurve.keys[0].value);
             lineVisual.widthCurve.keys[1].value = Mathf.Lerp(0f, _rayWidth, _scaleFactor);
+            Debug.Log("key2: " + lineVisual.widthCurve.keys[1].value);
         }
     }
 
