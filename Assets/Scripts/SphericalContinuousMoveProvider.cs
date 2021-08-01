@@ -44,7 +44,7 @@ public class SphericalContinuousMoveProvider : ActionBasedContinuousMoveProvider
         // }
 
         var inputForwardProjectedInWorldSpace = Vector3.ProjectOnPlane(inputForwardInWorldSpace, up);
-        var forwardRotation = Quaternion.FromToRotation(rigTransform.forward, inputForwardProjectedInWorldSpace);
+        var forwardRotation = Quaternion.FromToRotation(xrRig.cameraGameObject.transform.forward, inputForwardProjectedInWorldSpace);
 
         var translationInRigSpace = forwardRotation * inputMove * (MoveSpeed * Time.deltaTime);
         var translationInWorldSpace = rigTransform.TransformDirection(translationInRigSpace);

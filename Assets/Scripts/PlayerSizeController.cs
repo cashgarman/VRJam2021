@@ -100,19 +100,16 @@ public class PlayerSizeController : MonoBehaviour
         // Scale down the ray interactor and ray line renderer width
         foreach (var ray in _rays)
         {
-            ray.endPointDistance = Mathf.Lerp(_maxRayEndPointDistance, 0f, _scaleFactor);
-            ray.controlPointDistance = Mathf.Lerp(_maxRayEndPointDistance / 2f, 0f, _scaleFactor);
-            ray.controlPointHeight = Mathf.Lerp(_maxRayEndPointDistance / 4f, 0f, _scaleFactor);
+            ray.endPointDistance = Mathf.Lerp(0f, _maxRayEndPointDistance, _scaleFactor);
+            ray.controlPointDistance = Mathf.Lerp(0f, _maxRayEndPointDistance / 2f, _scaleFactor);
+            ray.controlPointHeight = Mathf.Lerp(0f, _maxRayEndPointDistance / 4f, _scaleFactor);
         }
 
         foreach (var lineVisual in _lineVisuals)
         {
-            Debug.Log("scale factor: " + _scaleFactor);
             lineVisual.lineLength = Mathf.Lerp(0f, _maxRayEndPointDistance, _scaleFactor);
             lineVisual.widthCurve.keys[0].value = Mathf.Lerp(0f, _rayWidth, _scaleFactor);
-            Debug.Log("key1: " + lineVisual.widthCurve.keys[0].value);
             lineVisual.widthCurve.keys[1].value = Mathf.Lerp(0f, _rayWidth, _scaleFactor);
-            Debug.Log("key2: " + lineVisual.widthCurve.keys[1].value);
         }
     }
 
