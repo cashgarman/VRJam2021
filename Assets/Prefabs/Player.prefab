@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 3230815911315320403}
   - component: {fileID: 9045029904618450267}
   - component: {fileID: 7527130046011854038}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -596,6 +596,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 467012133957935776}
     m_Modifications:
+    - target: {fileID: 612901503829007673, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
+      propertyPath: m_HideControllerOnSelect
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1306129306809284033, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
       propertyPath: m_Velocity
       value: 25
@@ -610,6 +614,10 @@ PrefabInstance:
       objectReference: {fileID: 3446258454398551040}
     - target: {fileID: 1306129306809284033, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
       propertyPath: m_KeepSelectedTargetValid
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1498535004650126515, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
+      propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1498535004650126519, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
@@ -683,6 +691,10 @@ PrefabInstance:
     - target: {fileID: 1498535005603259640, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
       propertyPath: m_BackGroundColor.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1498535005821314394, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1498535005821314398, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
       propertyPath: m_SampleFrequency
@@ -775,6 +787,10 @@ PrefabInstance:
     - target: {fileID: 6149104774572347450, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
       propertyPath: m_Radius
       value: 0.005
+      objectReference: {fileID: 0}
+    - target: {fileID: 6375337924681028172, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
+      propertyPath: m_HideControllerOnSelect
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6936890886488997145, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
       propertyPath: m_Parameters.widthMultiplier
