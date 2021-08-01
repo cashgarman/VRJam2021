@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 5945626914153322758}
   - component: {fileID: 3738692855560742901}
   - component: {fileID: 3230815911315320403}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -103,7 +103,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b50b693dbe0a054193b4e527f318dbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  freezeRotation: 0
+  freezeRotation: 1
 --- !u!114 &4626207873206879299
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -169,7 +169,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_System: {fileID: 4626207873206879299}
   m_MoveSpeed: 50
-  m_EnableStrafe: 1
+  m_EnableStrafe: 0
   m_UseGravity: 0
   m_GravityApplicationMode: 0
   m_ForwardSource: {fileID: 0}
@@ -565,6 +565,10 @@ PrefabInstance:
       propertyPath: m_KeepSelectedTargetValid
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1498535004650126515, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 1498535004650126519, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
       propertyPath: m_SampleFrequency
       value: 100
@@ -620,6 +624,10 @@ PrefabInstance:
     - target: {fileID: 1498535005209414907, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1498535005821314394, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1498535005821314398, guid: e5fdf68038986bf4aa44f0242234a63b, type: 3}
       propertyPath: m_SampleFrequency
