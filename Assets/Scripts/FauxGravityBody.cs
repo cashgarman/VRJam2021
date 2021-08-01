@@ -4,12 +4,11 @@ public class FauxGravityBody : MonoBehaviour
 {
     public bool freezeRotation = true;
     
-    private FauxGravityAttractor attractor;
+    public FauxGravityAttractor Attractor { get; private set; }
 
     private void Awake()
     {
-        if (attractor == null)
-            attractor = FindObjectOfType<FauxGravityAttractor>();
+        Attractor = FindObjectOfType<FauxGravityAttractor>();
 
         var rigidBody = GetComponent<Rigidbody>();
         
@@ -31,6 +30,6 @@ public class FauxGravityBody : MonoBehaviour
 
     private void Update()
     {
-        attractor.Attract(transform);
+        Attractor.Attract(transform);
     }
 }

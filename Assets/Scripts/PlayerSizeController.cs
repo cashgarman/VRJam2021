@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.XR.Interaction.Toolkit;
@@ -8,6 +7,12 @@ public class PlayerSizeController : MonoBehaviour
     [SerializeField] private Transform _leftController;
     [SerializeField] private Transform _rightController;
     [SerializeField] private float _maxControllerSpread = 1.3f;
+    [SerializeField] private XRRayInteractor[] _rays;
+    [SerializeField] private XRInteractorLineVisual[] _lineVisuals;
+    [SerializeField] private float _maxScale;
+    [SerializeField] private float _maxRayEndPointDistance = 1000f;
+    [SerializeField] private float _maxRayWidth = 0.75f;
+    [SerializeField] private float _minScale = 0.0001f;
     
     private bool _leftHeld;
     private bool _rightHeld;
@@ -15,16 +20,15 @@ public class PlayerSizeController : MonoBehaviour
     private float _startingDistance;
     private Vector3 _resizeStartScale;
     private Vector3 _initialScale;
-    [SerializeField] private XRRayInteractor[] _rays;
-    [SerializeField] private LineRenderer[] _lineRenderers;
-    [SerializeField] private float _maxScale;
-    [SerializeField] private float _maxRayEndPointDistance = 1000f;
-    [SerializeField] private float _maxRayWidth = 0.75f;
+    private SphericalContinuousMoveProvider _continuousMovement;
+    [SerializeField] private float _rayWidth = 8f;
 
     private void Awake()
     {
         _initialScale = transform.localScale;
-        UpdateRay();
+        _continuousMovement = GetComponent<SphericalContinuousMoveProvider>();
+        UpdateRay(transform.localScale.magnitude / _maxScale);
+        UpdateMovementSpeed(transform.localScale.magnitude / _maxScale);
     }
 
     public void OnLeftResizeActivated(InputAction.CallbackContext context)
@@ -63,17 +67,27 @@ public class PlayerSizeController : MonoBehaviour
             // Get the current local space distance between the controllers
             var distance = Vector3.Distance(_leftController.localPosition, _rightController.localPosition) / _maxControllerSpread;
             
+            // MATH!
             var scalePercent = (_startingDistance - distance) / _maxControllerSpread + 1f;
-            transform.localScale = _resizeStartScale * scalePercent;
+            transform.localScale = Vector3.Max(_resizeStartScale * scalePercent, _minScale * Vector3.one);
+            var scaleFactor = transform.localScale.magnitude / _maxScale;
 
-            UpdateRay();
+            // Update the player's movement speed
+            UpdateMovementSpeed(scaleFactor);
+
+            // Update the ray
+            UpdateRay(scaleFactor);
         }
     }
 
-    private void UpdateRay()
+    private void UpdateMovementSpeed(float scaleFactor)
+    {
+        _continuousMovement.MoveSpeed = Mathf.Lerp(0f, _continuousMovement.moveSpeed, scaleFactor);
+    }
+
+    private void UpdateRay(float scaleFactor)
     {
         // Scale down the ray interactor and ray line renderer width
-        var scaleFactor = transform.localScale.magnitude / _maxScale;
         foreach (var ray in _rays)
         {
             ray.endPointDistance = Mathf.Lerp(_maxRayEndPointDistance, 0f, scaleFactor);
@@ -81,8 +95,12 @@ public class PlayerSizeController : MonoBehaviour
             ray.controlPointHeight = Mathf.Lerp(_maxRayEndPointDistance / 4f, 0f, scaleFactor);
         }
 
-        foreach (var lineRenderer in _lineRenderers)
-            lineRenderer.widthMultiplier = scaleFactor;
+        foreach (var lineVisual in _lineVisuals)
+        {
+            lineVisual.lineLength = Mathf.Lerp(0f, _maxRayEndPointDistance, scaleFactor);
+            lineVisual.widthCurve.keys[0].value = Mathf.Lerp(0f, _rayWidth, scaleFactor);
+            lineVisual.widthCurve.keys[1].value = Mathf.Lerp(0f, _rayWidth, scaleFactor);
+        }
     }
 
     private void OnGUI()

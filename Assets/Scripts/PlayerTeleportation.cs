@@ -18,14 +18,15 @@ public class PlayerTeleportation : MonoBehaviour
 		//_leftController.gameObject.SetActive(left);
 		//_rightController.gameObject.SetActive(_rightController.inputDevice.IsPressed//(teleportRayShowButton, out _, .1f));
 
-		if (_leftController)
-		{
-			_leftController.gameObject.SetActive(CheckIfActivated(_leftController));
-		}
-
-        if (_rightController){
-			_rightController.gameObject.SetActive(CheckIfActivated(_rightController));
-		}
+		// if (_leftController)
+		// {
+		// 	_leftController.gameObject.SetActive(CheckIfActivated(_leftController));
+		// }
+  //
+  //       if (_rightController)
+  //       {
+		// 	_rightController.gameObject.SetActive(CheckIfActivated(_rightController));
+		// }
 	}
 
 	public bool CheckIfActivated(XRController controller)
