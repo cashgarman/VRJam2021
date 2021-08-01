@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class shrinkrayBullet : MonoBehaviour
+public class ShrinkrayBullet : MonoBehaviour
 {
     private TrailRenderer trailRenderer;
+
+    public Shrinkray rayGun;
 
     private void Awake()
     {
@@ -27,6 +29,9 @@ public class shrinkrayBullet : MonoBehaviour
             shrinkableObject.transform.localScale = shrinkableObject.transform.localScale / 2;
 
             Debug.Log("shrinking done");
+
+            rayGun.successfulShrinks++;
+            rayGun.SuccessfulShot();
         }
     }
 }

@@ -6,6 +6,8 @@ public class GrowrayBullet : MonoBehaviour
 {
     private TrailRenderer trailRenderer;
 
+    public Shrinkray rayGun;
+
     private void Awake()
     {
         trailRenderer = this.GetComponent<TrailRenderer>();
@@ -27,6 +29,9 @@ public class GrowrayBullet : MonoBehaviour
             shrinkableObject.transform.localScale = shrinkableObject.transform.localScale * 2;
 
             Debug.Log("growing done");
+
+            rayGun.successfulGrows++;
+            rayGun.SuccessfulShot();
         }
     }
 }
