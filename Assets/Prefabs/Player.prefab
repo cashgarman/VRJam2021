@@ -103,7 +103,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b50b693dbe0a054193b4e527f318dbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  freezeRotation: 0
+  freezeRotation: 1
 --- !u!114 &4626207873206879299
 MonoBehaviour:
   m_ObjectHideFlags: 0
