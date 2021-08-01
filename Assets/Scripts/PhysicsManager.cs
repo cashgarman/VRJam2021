@@ -6,9 +6,11 @@ public class PhysicsManager : MonoBehaviour
     
     [SerializeField] private PhysicMaterial _defaultPhysicsMaterial;
     [SerializeField] private float _defaultDrag = 0.1f;
+    [SerializeField] private float _gravity = -9.8f;
 
     public static float DefaultDrag => Instance._defaultDrag;
     public static PhysicMaterial DefaultPhysicsMaterial => Instance._defaultPhysicsMaterial;
+    public static float Gravity => Instance._gravity;
 
     void Awake()
     {

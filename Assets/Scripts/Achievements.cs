@@ -9,6 +9,7 @@ public class Achievements : MonoBehaviour
 	[Serializable]
 	public class Achievement
 	{
+		public string ID;
 		public string name;
 		public string description;
 		public bool awarded;
@@ -28,13 +29,13 @@ public class Achievements : MonoBehaviour
 		Load();
 	}
 
-	public static void Award(string achievementName)
+	public static void Award(string achievementID)
 	{
 		// Check if the achievement exists
-		var foundAchievement = _instance._achievements.FirstOrDefault(achievement => achievement.name == achievementName);
+		var foundAchievement = _instance._achievements.FirstOrDefault(achievement => achievement.ID == achievementID);
 		if (foundAchievement == null)
 		{
-			Debug.LogError($"Couldn't find an achievement with name {achievementName}");
+			Debug.LogError($"Couldn't find an achievement with name {achievementID}");
 			return;
 		}
 		
@@ -48,7 +49,7 @@ public class Achievements : MonoBehaviour
 
 	private void Award(Achievement achievement)
 	{
-		Debug.Log($"Awarded achievement {achievement.name}");
+		Debug.Log($"Awarded achievement {achievement.ID}");
 		achievement.awarded = true;
 		
 		// Show the notification

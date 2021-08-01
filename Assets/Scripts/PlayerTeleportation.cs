@@ -22,8 +22,9 @@ public class PlayerTeleportation : MonoBehaviour
 		{
 			_leftController.gameObject.SetActive(CheckIfActivated(_leftController));
 		}
-
-        if (_rightController){
+  
+        if (_rightController)
+        {
 			_rightController.gameObject.SetActive(CheckIfActivated(_rightController));
 		}
 	}
