@@ -159,6 +159,7 @@ MonoBehaviour:
   _minScale: 0.0001
   _rayWidth: 20
   _maxReticleScale: 1
+  HeldObjects: []
 --- !u!114 &3230815911315320403
 MonoBehaviour:
   m_ObjectHideFlags: 0

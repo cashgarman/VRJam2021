@@ -11,7 +11,12 @@ public class Shrinkray : MonoBehaviour
     
     [SerializeField] private AudioClip _shootingSound;
 
-    private void Awake()
+    public int successfulShrinks, successfulGrows;
+
+    [SerializeField] private int shrinksForAchievement = 3;
+    [SerializeField] private int growsForAchievement = 1;
+
+    public void Awake()
     {
         _audioSource = GetComponent<AudioSource>();
     }
@@ -24,10 +29,30 @@ public class Shrinkray : MonoBehaviour
         // Set the speed and direction of the bullet by referencing it's Rigidbody component
         spawnedRay.GetComponent<Rigidbody>().velocity = raySpeed * raySpawnPoint.forward;
 
+        if (spawnedRay.GetComponent<ShrinkrayBullet>())
+        {
+            spawnedRay.GetComponent<ShrinkrayBullet>().rayGun = this;
+        } else if (spawnedRay.GetComponent<GrowrayBullet>())
+        {
+            spawnedRay.GetComponent<GrowrayBullet>().rayGun = this;
+        }
+
         //Destroy the ray after some seconds so there aren't a bunch lying around
         Destroy(spawnedRay, 5f);
         
         // Play the shooting sound
         _audioSource.PlayOneShot(_shootingSound);
+    }
+
+    public void SuccessfulShot()
+    {
+        Debug.Log("successfulshot! S/Gs: " + successfulShrinks + ", " + successfulGrows);
+        if(successfulShrinks == shrinksForAchievement)
+        {
+            Achievements.Award("ShrinkingMachine");
+        } else if (successfulGrows == growsForAchievement)
+        {
+            Achievements.Award("LargeWorldAfterAll");
+        }
     }
 }

@@ -28,6 +28,10 @@ public class PlayerSizeController : MonoBehaviour
 
     public List<TeleportReticle> Reticules { get; set; } = new List<TeleportReticle>();
 
+
+    //---------KRISTEN--------
+    public List<GrabbableObject> HeldObjects = new List<GrabbableObject>();
+
     private void Awake()
     {
         _initialScale = transform.localScale;
@@ -87,6 +91,9 @@ public class PlayerSizeController : MonoBehaviour
             
             // Update the reticules
             UpdateReticles();
+
+            //------KRISTEN---Update the held objects
+            UpdateHeldObjects(scalePercent);
         }
     }
 
@@ -137,5 +144,25 @@ public class PlayerSizeController : MonoBehaviour
     public void RemoveReticle(TeleportReticle reticle)
     {
         Reticules.Remove(reticle);
+    }
+
+    //--------KRISTEN------
+    public void AddHeldObject(GrabbableObject heldObject)
+    {
+        HeldObjects.Add(heldObject);
+    }
+
+    public void RemoveHeldObject(GrabbableObject heldObject)
+    {
+        HeldObjects.Remove(heldObject);
+    }
+
+    public void UpdateHeldObjects(float scalePercent)
+    {
+        foreach (var heldObject in HeldObjects)
+        {
+            //heldObject.gameObject.transform.localScale = Vector3.Lerp(Vector3.one, heldObject.gameObject.transform.localScale, _scaleFactor * 100);
+            heldObject.transform.localScale = heldObject.startingScale * scalePercent;
+        }
     }
 }

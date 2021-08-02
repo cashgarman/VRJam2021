@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class TeleportReticle : MonoBehaviour
 {
@@ -12,19 +13,16 @@ public class TeleportReticle : MonoBehaviour
 
 	private void OnEnable()
 	{
-		Debug.Log($"Adding reticle {name}");
 		FindObjectOfType<PlayerSizeController>().AddReticle(this);
 	}
 
 	private void OnDisable()
 	{
-		Debug.Log($"Disabling reticle {name}");
 		FindObjectOfType<PlayerSizeController>().RemoveReticle(this);
 	}
 
 	private void OnDestroy()
 	{
-		Debug.Log($"Destroying reticle {name}");
 		FindObjectOfType<PlayerSizeController>().RemoveReticle(this);
 	}
 
