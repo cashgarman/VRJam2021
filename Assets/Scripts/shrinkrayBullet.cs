@@ -7,6 +7,7 @@ public class ShrinkrayBullet : MonoBehaviour
     private TrailRenderer trailRenderer;
 
     public Shrinkray rayGun;
+    [SerializeField] private AudioClip shrinkSound;
 
     private void Awake()
     {
@@ -23,6 +24,8 @@ public class ShrinkrayBullet : MonoBehaviour
         if (other.gameObject.CompareTag("Shrinkable"))
         {
             Debug.Log(other.collider.name + " is shrinkable");
+
+            rayGun.GetComponent<AudioSource>().PlayOneShot(shrinkSound);
 
             GameObject shrinkableObject = other.gameObject;
 

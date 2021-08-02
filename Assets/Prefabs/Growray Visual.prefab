@@ -183,3 +183,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 984a87b91903d9d4bbfe181acb04b63e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rayGun: {fileID: 0}
+  growSound: {fileID: 8300000, guid: cd1f44169f9231b47b73b04fb131c7b3, type: 3}
