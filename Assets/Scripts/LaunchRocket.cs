@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class LaunchRocket : MonoBehaviour
 {
+
+    public AudioSource audioSource;
+    public AudioClip audioClip;
+
     public bool launch = false;
     public float liftSpeed = 10;
     public GameObject bubbles;
@@ -43,5 +47,6 @@ public class LaunchRocket : MonoBehaviour
     {
         launch = true;
         Achievements.Award("ShootForTheMoon");
+        audioSource.PlayOneShot(audioClip);
     }
 }
