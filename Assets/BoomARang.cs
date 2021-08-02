@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class BoomARang : MonoBehaviour
 {
+    public AudioSource audioSource;
+    public AudioClip audioClip;
+
     private bool flying = false;
     public float flightTime = 1.5f;
     public Transform startPos;
@@ -29,7 +32,7 @@ public class BoomARang : MonoBehaviour
         Achievements.Award("AussieThrowDown");
         flying = true;
         startPos = transform;
-
+        audioSource.PlayOneShot(audioClip);
     }
 
     public void Grabbed()

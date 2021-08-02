@@ -32,6 +32,10 @@ public class ButtonLogic : MonoBehaviour {
     public GameObject target;
     private bool buttonDown;
 
+	public AudioSource audioSource;
+	public AudioClip audioClip;
+
+
 	// Use this for initialization
 	void Start () 
 	{
@@ -48,7 +52,7 @@ public class ButtonLogic : MonoBehaviour {
     {
         //Animate the button
         ButtonDown();
-
+		audioSource.PlayOneShot(audioClip);
         //Trigger the launch on the the rocket
         target.GetComponent<LaunchRocket>().LaunchIt();
         

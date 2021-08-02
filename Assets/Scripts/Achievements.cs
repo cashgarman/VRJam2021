@@ -22,6 +22,10 @@ public class Achievements : MonoBehaviour
 	[SerializeField] private Transform _achievementSpawnPoint;
 	[SerializeField] private float _notificationDuration = 5f;
 
+
+	public AudioSource audioSource;
+	public AudioClip audioClip;
+
 	private void Awake()
 	{
 		_instance = this;
@@ -63,6 +67,7 @@ public class Achievements : MonoBehaviour
 	{
 		var notification = Instantiate(_achievementNotificationPrefab, _achievementSpawnPoint.position, Quaternion.identity, _achievementSpawnPoint);
 		notification.Init(achievement);
+		audioSource.PlayOneShot(audioClip);
 
 		yield return new WaitForSeconds(_notificationDuration);
 		
