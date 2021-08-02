@@ -23,6 +23,9 @@ public class PhysicsManager : MonoBehaviour
             // If the rigid body uses gravity
             if (rigidBody.useGravity)
             {
+                // Turn off the gravity
+                rigidBody.useGravity = false;
+                
                 // Add a gravity attractor to the object if it doesn't already have one
                 if (rigidBody.GetComponent<FauxGravityBody>() == null)
                 {
