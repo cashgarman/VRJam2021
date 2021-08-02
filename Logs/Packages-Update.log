@@ -1,0 +1,11 @@
+
+=== Sun Aug  1 21:03:55 2021
+
+Packages were changed.
+Update Mode: mergeDefaultDependencies
+
+The following packages were added:
+  com.unity.ads@2.0.8
+  com.unity.analytics@3.2.3
+  com.unity.package-manager-ui@2.0.13
+  com.unity.purchasing@2.2.1

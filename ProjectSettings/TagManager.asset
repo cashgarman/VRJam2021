@@ -7,7 +7,7 @@ TagManager:
   - Controller
   - Bullet
   - Ground
-  - Shrinkable
+  - DartBoard
   layers:
   - Default
   - TransparentFX
