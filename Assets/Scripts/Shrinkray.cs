@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.XR.Interaction.Toolkit;
+﻿using UnityEngine;
 
 public class Shrinkray : MonoBehaviour
 {
@@ -10,10 +7,17 @@ public class Shrinkray : MonoBehaviour
     public Transform raySpawnPoint;
 
     public float raySpeed = 10.0f;
+    private AudioSource _audioSource;
+    
+    [SerializeField] private AudioClip _shootingSound;
+
+    private void Awake()
+    {
+        _audioSource = GetComponent<AudioSource>();
+    }
 
     public void ShootRay()
     {
-
         // Spawn an instance of the ray prefab
         GameObject spawnedRay = Instantiate(rayVisual, raySpawnPoint.position, raySpawnPoint.rotation);
 
@@ -22,5 +26,8 @@ public class Shrinkray : MonoBehaviour
 
         //Destroy the ray after some seconds so there aren't a bunch lying around
         Destroy(spawnedRay, 5f);
+        
+        // Play the shooting sound
+        _audioSource.PlayOneShot(_shootingSound);
     }
 }
