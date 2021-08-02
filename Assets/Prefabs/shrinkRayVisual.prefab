@@ -183,3 +183,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1bbd7bcfff60ad4ba5ce3a79d69ec34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rayGun: {fileID: 0}
+  shrinkSound: {fileID: 8300000, guid: a875be46d442c0d469b672020074c767, type: 3}

@@ -7,6 +7,7 @@ public class GrowrayBullet : MonoBehaviour
     private TrailRenderer trailRenderer;
 
     public Shrinkray rayGun;
+    [SerializeField] private AudioClip growSound;
 
     private void Awake()
     {
@@ -23,6 +24,8 @@ public class GrowrayBullet : MonoBehaviour
         if (other.gameObject.CompareTag("Shrinkable"))
         {
             Debug.Log(other.collider.name + " is growable");
+
+            rayGun.GetComponent<AudioSource>().PlayOneShot(growSound);
 
             GameObject shrinkableObject = other.gameObject;
 
