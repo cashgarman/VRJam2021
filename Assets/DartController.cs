@@ -9,7 +9,7 @@ public class DartController : MonoBehaviour
     public AudioClip audioClip;
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.tag == "DartBoard")
+        if(collision.gameObject.CompareTag("DartBoard"))
         {
             GetComponent<Rigidbody>().isKinematic = true;
             Achievements.Award("BullsEye");
